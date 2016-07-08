@@ -32,6 +32,7 @@ import eu.matejkormuth.math.quaternions.Quaternionf;
 import eu.matejkormuth.math.vectors.Vector3d;
 import eu.matejkormuth.math.vectors.Vector3f;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.ToString;
 
 @EqualsAndHashCode
@@ -42,9 +43,13 @@ public class Matrix4f {
     public static final Matrix4f IDENTITY = new Matrix4f();
     public static final Matrix4f ZERO = new Matrix4f(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
+    @Getter
     private final float m00, m01, m02, m03;
+    @Getter
     private final float m10, m11, m12, m13;
+    @Getter
     private final float m20, m21, m22, m23;
+    @Getter
     private final float m30, m31, m32, m33;
 
     public Matrix4f(float m00, float m01, float m02, float m03,

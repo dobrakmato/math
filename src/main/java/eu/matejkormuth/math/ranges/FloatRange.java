@@ -52,4 +52,9 @@ public class FloatRange {
         }
         return n;
     }
+
+    @Override
+    public String toString() {
+        return "<" + Float.toString(min) + "; " + Float.toString(max) + ">";
+    }
 }

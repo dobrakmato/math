@@ -58,4 +58,9 @@ public class LongRange {
         }
         return n;
     }
+
+    @Override
+    public String toString() {
+        return "<" + Long.toString(min) + "; " + Long.toString(max) + ">";
+    }
 }

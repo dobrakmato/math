@@ -118,4 +118,9 @@ public class Vector2d {
         return (Math.pow(vec.x - x, 2) + Math.pow(vec.y - y, 2));
     }
 
+    @Override
+    public String toString() {
+        return "[" + Double.toString(x) + "; " + Double.toString(y) + "]";
+    }
+
 }

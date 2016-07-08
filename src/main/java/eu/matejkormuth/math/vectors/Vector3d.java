@@ -134,6 +134,11 @@ public class Vector3d {
         return (Math.pow(vec.x - x, 2) + Math.pow(vec.y - y, 2) + Math.pow(vec.z - z, 2));
     }
 
+    @Override
+    public String toString() {
+        return "[" + Double.toString(x) + "; " + Double.toString(y) + "; " + Double.toString(z) + "]";
+    }
+
     public Vector3d rotate(double degrees, Vector3d axis) {
         Quaterniond rotation = Quaterniond.fromAngle(degrees, axis);
         Quaterniond conjugate = rotation.conjugate();

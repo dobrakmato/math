@@ -118,4 +118,8 @@ public class Vector2f {
         return (float) (Math.pow(vec.x - x, 2) + Math.pow(vec.y - y, 2));
     }
 
+    @Override
+    public String toString() {
+        return "[" + Float.toString(x) + "; " + Float.toString(y) + "]";
+    }
 }

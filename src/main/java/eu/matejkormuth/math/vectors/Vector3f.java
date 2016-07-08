@@ -134,6 +134,11 @@ public class Vector3f {
         return (float) (Math.pow(vec.x - x, 2) + Math.pow(vec.y - y, 2) + Math.pow(vec.z - z, 2));
     }
 
+    @Override
+    public String toString() {
+        return "[" + Float.toString(x) + "; " + Float.toString(y) + "; " + Float.toString(z) + "]";
+    }
+
     public Vector3f rotate(double degrees, Vector3f axis) {
         Quaternionf rotation = Quaternionf.fromAngle(degrees, axis);
         Quaternionf conjugate = rotation.conjugate();
@@ -156,4 +161,5 @@ public class Vector3f {
     public static Vector3f nlerp(Vector3f start, Vector3f end, float f) {
         return start.add(end.subtract(start).multiply(f)).normalize();
     }
+
 }

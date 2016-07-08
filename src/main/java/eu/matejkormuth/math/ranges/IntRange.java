@@ -58,4 +58,9 @@ public class IntRange {
         }
         return n;
     }
+
+    @Override
+    public String toString() {
+        return "<" + Integer.toString(min) + "; " + Integer.toString(max) + ">";
+    }
 }

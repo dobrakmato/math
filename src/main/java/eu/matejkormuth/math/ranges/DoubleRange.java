@@ -52,4 +52,9 @@ public class DoubleRange {
         }
         return n;
     }
+
+    @Override
+    public String toString() {
+        return "<" + Double.toString(min) + "; " + Double.toString(max) + ">";
+    }
 }
