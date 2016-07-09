@@ -90,19 +90,19 @@ public class Quaternionf {
 
     public Quaternionf multiply(Vector3d rhs) {
         return new Quaternionf(
+                (float) (-x * rhs.getX() - y * rhs.getY() - z * rhs.getZ()),
                 (float) (w * rhs.getX() + y * rhs.getZ() - z * rhs.getY()),
                 (float) (w * rhs.getY() + z * rhs.getX() - x * rhs.getZ()),
-                (float) (w * rhs.getZ() + x * rhs.getY() - y * rhs.getX()),
-                (float) (-x * rhs.getX() - y * rhs.getY() - z * rhs.getZ())
+                (float) (w * rhs.getZ() + x * rhs.getY() - y * rhs.getX())
         );
     }
 
     public Quaternionf multiply(Vector3f rhs) {
         return new Quaternionf(
+                -x * rhs.getX() - y * rhs.getY() - z * rhs.getZ(),
                 w * rhs.getX() + y * rhs.getZ() - z * rhs.getY(),
                 w * rhs.getY() + z * rhs.getX() - x * rhs.getZ(),
-                w * rhs.getZ() + x * rhs.getY() - y * rhs.getX(),
-                -x * rhs.getX() - y * rhs.getY() - z * rhs.getZ()
+                w * rhs.getZ() + x * rhs.getY() - y * rhs.getX()
         );
     }
 

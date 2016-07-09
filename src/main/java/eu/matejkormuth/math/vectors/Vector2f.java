@@ -98,8 +98,8 @@ public class Vector2f {
     // cross product undefined for 2d vectors
 
     public Vector2f normalize() {
-        float length = length();
-        return new Vector2f(x / length, y / length);
+        float invLength = 1.0f / length();
+        return new Vector2f(x * invLength, y * invLength);
     }
 
     public float length() {

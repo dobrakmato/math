@@ -114,8 +114,8 @@ public class Vector3f {
     }
 
     public Vector3f normalize() {
-        float length = length();
-        return new Vector3f(x / length, y / length, z / length);
+        float invLength = 1f / length();
+        return new Vector3f(x * invLength, y * invLength, z * invLength);
     }
 
     public float length() {

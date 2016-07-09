@@ -98,8 +98,8 @@ public class Vector2d {
     // cross product undefined for 2d vectors
 
     public Vector2d normalize() {
-        double length = length();
-        return new Vector2d(x / length, y / length);
+        double invLength = 1.0D / length();
+        return new Vector2d(x * invLength, y * invLength);
     }
 
     public double length() {

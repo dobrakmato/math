@@ -91,19 +91,19 @@ public class Quaterniond {
 
     public Quaterniond multiply(Vector3d rhs) {
         return new Quaterniond(
+                -x * rhs.getX() - y * rhs.getY() - z * rhs.getZ(),
                 w * rhs.getX() + y * rhs.getZ() - z * rhs.getY(),
                 w * rhs.getY() + z * rhs.getX() - x * rhs.getZ(),
-                w * rhs.getZ() + x * rhs.getY() - y * rhs.getX(),
-                -x * rhs.getX() - y * rhs.getY() - z * rhs.getZ()
+                w * rhs.getZ() + x * rhs.getY() - y * rhs.getX()
         );
     }
 
     public Quaterniond multiply(Vector3f rhs) {
         return new Quaterniond(
+                -x * rhs.getX() - y * rhs.getY() - z * rhs.getZ(),
                 w * rhs.getX() + y * rhs.getZ() - z * rhs.getY(),
                 w * rhs.getY() + z * rhs.getX() - x * rhs.getZ(),
-                w * rhs.getZ() + x * rhs.getY() - y * rhs.getX(),
-                -x * rhs.getX() - y * rhs.getY() - z * rhs.getZ()
+                w * rhs.getZ() + x * rhs.getY() - y * rhs.getX()
         );
     }
 

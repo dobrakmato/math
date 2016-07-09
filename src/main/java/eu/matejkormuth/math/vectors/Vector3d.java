@@ -114,8 +114,8 @@ public class Vector3d {
     }
 
     public Vector3d normalize() {
-        double length = length();
-        return new Vector3d(x / length, y / length, z / length);
+        double invLength = 1.0D / length();
+        return new Vector3d(x * invLength, y * invLength, z * invLength);
     }
 
     public double length() {
